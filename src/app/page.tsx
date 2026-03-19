@@ -163,30 +163,21 @@ export default function Home() {
       {/* 상품 섹션들 — 크롤링 등록 상품 포함 */}
       <BestProducts />
 
-      {/* 브랜드 스토리 */}
+      {/* 배너 */}
       <section className="max-w-7xl mx-auto px-4 mt-20">
-        <div className="bg-secondary rounded-3xl overflow-hidden">
-          <div className="grid md:grid-cols-2">
-            <div className="p-10 md:p-16 flex flex-col justify-center">
-              <div className="flex items-center gap-2 mb-4">
-                <FenrirSymbolV3 size={14} />
-                <p className="text-white/20 text-[10px] tracking-[0.3em]">THE MYTH</p>
-              </div>
-              <h3 className="text-3xl md:text-4xl font-black text-white leading-snug">
-                쇠사슬을 끊고<br /><span className="text-primary">진짜 내가 된다.</span>
-              </h3>
-              <p className="text-white/30 text-sm mt-4 leading-relaxed max-w-sm">
-                펜리르는 신들도 두려워한 북유럽 신화의 거대한 늑대.
-                묶여있던 쇠사슬을 끊고 자유를 찾았듯,
-                당신도 한계를 깨고 변할 수 있습니다.
-              </p>
-              <Link href="/signup" className="mt-8 inline-flex items-center gap-2 text-primary text-sm font-semibold hover:gap-3 transition-all">
-                JOIN THE PACK <span>&rarr;</span>
-              </Link>
-            </div>
-            <div className="bg-gradient-to-br from-primary/10 to-transparent p-10 md:p-16 flex items-center justify-center">
-              <FenrirSymbolV3 size={140} color="rgba(230,57,70,0.12)" />
-            </div>
+        <div className="bg-secondary rounded-3xl p-10 md:p-16 text-center relative overflow-hidden">
+          <div className="absolute inset-0 flex items-center justify-center opacity-[0.02]">
+            <FenrirSymbolV3 size={400} color="white" />
+          </div>
+          <div className="relative">
+            <p className="text-white/20 text-[10px] tracking-[0.3em] mb-6">FENRIR MEMBERSHIP</p>
+            <h3 className="text-2xl md:text-3xl font-black text-white">
+              최저가, 매일 업데이트.
+            </h3>
+            <p className="text-white/30 text-sm mt-3">가입하고 신상품 알림을 받아보세요</p>
+            <Link href="/signup" className="mt-6 inline-block bg-primary hover:bg-primary-dark text-white font-bold px-8 py-3.5 rounded-full text-sm transition-all hover:scale-105">
+              무료 가입하기
+            </Link>
           </div>
         </div>
       </section>
