@@ -63,7 +63,7 @@ export default function Header() {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+                  onKeyDown={(e) => e.key === "Enter" && !e.nativeEvent.isComposing && handleSearch()}
                   placeholder="어떤 상품을 찾고 있나요?"
                   className="w-full px-4 py-2.5 bg-white/10 border border-white/20 rounded-l-lg outline-none text-sm text-white placeholder-white/40 focus:border-primary focus:bg-white/15 transition-all"
                 />
