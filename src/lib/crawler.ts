@@ -28,7 +28,7 @@ export async function searchNaverShopping(
     return getDemoProducts(query);
   }
 
-  const url = `https://openapi.naver.com/v1/search/shop.json?query=${encodeURIComponent(query)}&display=${display}&sort=asc`;
+  const url = `https://openapi.naver.com/v1/search/shop.json?query=${encodeURIComponent(query)}&display=${display + 10}&sort=asc`;
 
   const res = await fetch(url, {
     headers: {
@@ -44,7 +44,9 @@ export async function searchNaverShopping(
 
   const data = await res.json();
 
-  return data.items.map((item: {
+  const MIN_PRICE = 1000; // 1,000원 이하 미끼 상품 제외
+
+  return data.items.filter((item: { lprice: string }) => parseInt(item.lprice) >= MIN_PRICE).slice(0, display).map((item: {
     productId: string;
     title: string;
     lprice: string;
