@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" fill="none">
+  <defs>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E63946"/>
+      <stop offset="100%" style="stop-color:#ff6b6b"/>
+    </linearGradient>
+    <linearGradient id="darkG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0F0F1A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 몸통 (후드티 입은) -->
+  <rect x="95" y="210" rx="25" ry="25" width="110" height="130" fill="url(#darkG)"/>
+
+  <!-- 후드티 앞판 지퍼 라인 -->
+  <line x1="150" y1="220" x2="150" y2="340" stroke="#2a2a4a" stroke-width="1.5"/>
+
+  <!-- 후드티 로고 텍스트 영역 -->
+  <rect x="115" y="255" rx="3" ry="3" width="70" height="18" fill="none" stroke="#E63946" stroke-width="1" opacity="0.5"/>
+  <text x="150" y="268" text-anchor="middle" fill="#E63946" font-size="10" font-weight="bold" font-family="Arial">WOLF PACK</text>
+
+  <!-- 왼팔 (덤벨 들고 있는) -->
+  <rect x="60" y="230" rx="12" ry="12" width="40" height="80" fill="url(#darkG)"/>
+  <!-- 왼손 -->
+  <circle cx="80" cy="320" r="12" fill="url(#bodyGrad)"/>
+  <!-- 덤벨 -->
+  <rect x="60" y="316" rx="3" ry="3" width="40" height="8" fill="#888"/>
+  <rect x="55" y="310" rx="2" ry="2" width="12" height="20" fill="#666"/>
+  <rect x="93" y="310" rx="2" ry="2" width="12" height="20" fill="#666"/>
+
+  <!-- 오른팔 -->
+  <rect x="200" y="230" rx="12" ry="12" width="40" height="70" fill="url(#darkG)"/>
+  <!-- 오른손 (주먹) -->
+  <circle cx="220" cy="310" r="12" fill="url(#bodyGrad)"/>
+
+  <!-- 다리 왼쪽 -->
+  <rect x="105" y="330" rx="10" ry="10" width="35" height="55" fill="#1a1a2e"/>
+  <!-- 신발 왼쪽 -->
+  <rect x="100" y="375" rx="8" ry="8" width="45" height="18" fill="#E63946"/>
+
+  <!-- 다리 오른쪽 -->
+  <rect x="160" y="330" rx="10" ry="10" width="35" height="55" fill="#1a1a2e"/>
+  <!-- 신발 오른쪽 -->
+  <rect x="155" y="375" rx="8" ry="8" width="45" height="18" fill="#E63946"/>
+
+  <!-- 머리 -->
+  <!-- 왼쪽 귀 -->
+  <polygon points="110,130 85,50 135,105" fill="url(#bodyGrad)"/>
+  <polygon points="113,125 93,62 130,108" fill="#C62828"/>
+
+  <!-- 오른쪽 귀 -->
+  <polygon points="190,130 215,50 165,105" fill="url(#bodyGrad)"/>
+  <polygon points="187,125 207,62 170,108" fill="#C62828"/>
+
+  <!-- 머리 메인 -->
+  <ellipse cx="150" cy="150" rx="55" ry="50" fill="url(#bodyGrad)"/>
+
+  <!-- 얼굴 안쪽 -->
+  <ellipse cx="150" cy="155" rx="42" ry="40" fill="#C62828"/>
+
+  <!-- 이마 마킹 -->
+  <path d="M150,110 L133,140 L150,133 L167,140 Z" fill="#ff8a8a" opacity="0.5"/>
+
+  <!-- 선글라스 (힙하게) -->
+  <rect x="118" y="138" rx="5" ry="5" width="25" height="18" fill="#0F0F1A"/>
+  <rect x="157" y="138" rx="5" ry="5" width="25" height="18" fill="#0F0F1A"/>
+  <line x1="143" y1="147" x2="157" y2="147" stroke="#0F0F1A" stroke-width="2.5"/>
+  <!-- 선글라스 반사광 -->
+  <rect x="121" y="141" rx="2" ry="2" width="8" height="4" fill="white" opacity="0.2"/>
+  <rect x="160" y="141" rx="2" ry="2" width="8" height="4" fill="white" opacity="0.2"/>
+
+  <!-- 코 -->
+  <ellipse cx="150" cy="170" rx="8" ry="5" fill="#0F0F1A"/>
+
+  <!-- 입 (살짝 웃는) -->
+  <path d="M140,178 Q150,186 160,178" stroke="#0F0F1A" stroke-width="2" fill="none"/>
+
+  <!-- 송곳니 -->
+  <polygon points="142,178 144,185 146,178" fill="white" opacity="0.9"/>
+  <polygon points="158,178 156,185 154,178" fill="white" opacity="0.9"/>
+
+  <!-- 뺨 수염 -->
+  <path d="M105,155 L85,150 M105,160 L83,158 M105,165 L85,168" stroke="url(#bodyGrad)" stroke-width="1.5" opacity="0.5"/>
+  <path d="M195,155 L215,150 M195,160 L217,158 M195,165 L215,168" stroke="url(#bodyGrad)" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- 목 -->
+  <rect x="135" y="195" width="30" height="20" fill="url(#bodyGrad)"/>
+
+  <!-- 후드 -->
+  <path d="M95,215 Q90,200 110,195 L150,190 L190,195 Q210,200 205,215" fill="url(#darkG)" stroke="#2a2a4a" stroke-width="1"/>
+</svg>

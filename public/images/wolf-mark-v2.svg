@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" fill="none">
+  <!-- 2안: 네거티브 스페이스 워드마크 -->
+  <!-- M에 늑대 귀가 통합되고, 전체적으로 볼드한 커스텀 서체 -->
+
+  <!-- 배경 없는 순수 타이포 -->
+
+  <!-- M - 늑대 귀 통합 (상단 두 봉우리가 날카로운 귀처럼) -->
+  <path d="
+    M0 70 L0 8 L8 8 L24 4 L40 30 L56 4 L72 8 L80 8 L80 70 L64 70 L64 30 L48 54 L32 30 L16 70 Z
+  " fill="#E63946"/>
+
+  <!-- E -->
+  <rect x="90" y="8" width="50" height="12" rx="1" fill="#E63946"/>
+  <rect x="90" y="8" width="14" height="62" rx="1" fill="#E63946"/>
+  <rect x="90" y="34" width="40" height="10" rx="1" fill="#E63946"/>
+  <rect x="90" y="58" width="50" height="12" rx="1" fill="#E63946"/>
+
+  <!-- L -->
+  <rect x="150" y="8" width="14" height="62" rx="1" fill="#E63946"/>
+  <rect x="150" y="58" width="45" height="12" rx="1" fill="#E63946"/>
+
+  <!-- C -->
+  <path d="
+    M230 8 L260 8 L260 20 L230 20 L222 20 L216 26 L216 52 L222 58 L230 58 L260 58 L260 70 L230 70
+    Q205 70 205 45 L205 33 Q205 8 230 8 Z
+  " fill="#E63946"/>
+
+  <!-- H -->
+  <rect x="270" y="8" width="14" height="62" rx="1" fill="#E63946"/>
+  <rect x="270" y="34" width="50" height="10" rx="1" fill="#E63946"/>
+  <rect x="306" y="8" width="14" height="62" rx="1" fill="#E63946"/>
+
+  <!-- I (점 대신 작은 늑대 눈 다이아몬드) -->
+  <path d="M337 4 L342 8 L337 12 L332 8 Z" fill="#E63946"/>
+  <rect x="330" y="18" width="14" height="52" rx="1" fill="#E63946"/>
+</svg>
