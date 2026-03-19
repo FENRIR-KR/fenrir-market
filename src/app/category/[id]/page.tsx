@@ -53,12 +53,9 @@ export default function CategoryPage({ params }: { params: Promise<{ id: string 
             <span className="text-white/60">{category.name.toUpperCase()}</span>
           </nav>
 
-          <div className="flex items-center gap-4 mb-3">
-            <span className="text-5xl">{category.icon}</span>
-            <div>
-              <p className="text-primary text-xs font-bold tracking-[0.2em]">CATEGORY</p>
-              <h1 className="text-3xl md:text-4xl font-black text-white">{category.name}</h1>
-            </div>
+          <div className="mb-3">
+            <p className="text-primary text-xs font-bold tracking-[0.2em]">CATEGORY</p>
+            <h1 className="text-3xl md:text-4xl font-black text-white mt-1">{category.name}</h1>
           </div>
           <p className="text-white/40 text-sm mt-2">
             총 <strong className="text-white">{filteredProducts.length}</strong>개 상품

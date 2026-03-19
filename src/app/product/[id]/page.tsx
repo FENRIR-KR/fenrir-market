@@ -2,6 +2,7 @@
 
 import ProductCard from "@/components/ProductCard";
 import ProductImage from "@/components/ProductImage";
+import StarRating from "@/components/StarRating";
 import Link from "next/link";
 import { useState, use } from "react";
 import { useCart } from "@/contexts/CartContext";
@@ -70,12 +71,12 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
               {/* 뱃지 */}
               <div className="flex gap-2 mb-3">
                 {product.isBest && (
-                  <span className="bg-white/10 text-white text-[10px] px-2.5 py-1 rounded-md font-bold tracking-wider">BEST</span>
+                  <span className="bg-primary/20 text-primary text-[10px] px-2.5 py-1 rounded font-bold tracking-wider">BEST</span>
                 )}
                 {product.isNew && (
-                  <span className="bg-accent/20 text-accent text-[10px] px-2.5 py-1 rounded-md font-bold tracking-wider">NEW</span>
+                  <span className="bg-accent/20 text-accent text-[10px] px-2.5 py-1 rounded font-bold tracking-wider">NEW</span>
                 )}
-                <span className="bg-white/5 text-white/40 text-[10px] px-2.5 py-1 rounded-md tracking-wider">
+                <span className="bg-white/10 text-white/50 text-[10px] px-2.5 py-1 rounded tracking-wider">
                   {categoryNames[product.category]}
                 </span>
               </div>
@@ -83,14 +84,8 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
               <h1 className="text-2xl md:text-3xl font-black text-white leading-snug">{product.name}</h1>
 
               {/* 별점 */}
-              <div className="flex items-center gap-2 mt-3">
-                <div className="flex text-yellow-400 text-sm">
-                  {"★".repeat(Math.floor(product.rating))}
-                  {"☆".repeat(5 - Math.floor(product.rating))}
-                </div>
-                <span className="text-sm text-white/40">
-                  {product.rating} ({product.reviewCount.toLocaleString()})
-                </span>
+              <div className="mt-3">
+                <StarRating rating={product.rating} count={product.reviewCount} size="md" />
               </div>
 
               {/* 가격 */}
@@ -231,13 +226,17 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
             </div>
           )}
           {activeTab === "review" && (
-            <div className="text-center py-12 text-gray-dark">
-              <p>아직 리뷰가 없습니다. 첫 번째 리뷰를 작성해보세요!</p>
+            <div className="text-center py-16">
+              <p className="text-3xl font-black text-gray-medium/50 mb-3">REVIEW</p>
+              <p className="text-sm text-gray-dark">아직 리뷰가 없습니다</p>
+              <button className="mt-4 text-sm bg-secondary text-white px-6 py-2.5 rounded-xl hover:bg-primary transition-colors font-semibold">첫 리뷰 작성하기</button>
             </div>
           )}
           {activeTab === "qna" && (
-            <div className="text-center py-12 text-gray-dark">
-              <p>문의사항이 없습니다.</p>
+            <div className="text-center py-16">
+              <p className="text-3xl font-black text-gray-medium/50 mb-3">Q&A</p>
+              <p className="text-sm text-gray-dark">문의사항이 없습니다</p>
+              <button className="mt-4 text-sm bg-secondary text-white px-6 py-2.5 rounded-xl hover:bg-primary transition-colors font-semibold">문의하기</button>
             </div>
           )}
           {activeTab === "shipping" && (

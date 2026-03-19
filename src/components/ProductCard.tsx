@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Product } from "@/data/products";
 import ProductImage from "@/components/ProductImage";
+import StarRating from "@/components/StarRating";
 
 export default function ProductCard({ product }: { product: Product }) {
   const formattedPrice = product.price.toLocaleString();
@@ -18,10 +19,10 @@ export default function ProductCard({ product }: { product: Product }) {
           {/* 뱃지 */}
           <div className="absolute top-2 left-2 flex flex-col gap-1">
             {product.isBest && (
-              <span className="bg-secondary text-white text-xs px-2 py-0.5 rounded-md font-bold tracking-wide">BEST</span>
+              <span className="bg-primary/90 text-white text-[10px] px-2 py-0.5 rounded font-bold tracking-wider">BEST</span>
             )}
             {product.isNew && (
-              <span className="bg-accent text-secondary text-xs px-2 py-0.5 rounded-md font-bold tracking-wide">NEW</span>
+              <span className="bg-accent text-secondary text-[10px] px-2 py-0.5 rounded font-bold tracking-wider">NEW</span>
             )}
           </div>
 
@@ -54,12 +55,8 @@ export default function ProductCard({ product }: { product: Product }) {
             </p>
           </div>
 
-          <div className="flex items-center gap-1 mt-2">
-            <div className="flex text-yellow-400 text-xs">
-              {"★".repeat(Math.floor(product.rating))}
-              {"☆".repeat(5 - Math.floor(product.rating))}
-            </div>
-            <span className="text-xs text-gray-dark">({product.reviewCount.toLocaleString()})</span>
+          <div className="mt-2">
+            <StarRating rating={product.rating} count={product.reviewCount} />
           </div>
 
           <div className="flex flex-wrap gap-1 mt-2">
