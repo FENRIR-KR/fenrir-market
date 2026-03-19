@@ -19,8 +19,8 @@ export default function MyPage() {
     return (
       <div className="min-h-[60vh] flex flex-col">
         <div className="bg-secondary py-20 text-center">
-          <p className="text-5xl mb-4">🔒</p>
-          <h2 className="text-2xl font-black text-white mb-2">로그인이 필요합니다</h2>
+          <FenrirSymbolV3 size={48} color="rgba(255,255,255,0.15)" />
+          <h2 className="text-2xl font-black text-white mb-2 mt-4">로그인이 필요합니다</h2>
           <p className="text-white/40 text-sm mb-6">마이페이지를 이용하려면 로그인해주세요.</p>
           <Link href="/login" className="bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-3 rounded-xl transition-colors">
             로그인하기
@@ -33,12 +33,12 @@ export default function MyPage() {
   const handleLogout = () => { logout(); router.push("/"); };
 
   const menuItems = [
-    { icon: "📦", title: "주문/배송 조회", desc: "주문 내역과 배송 상태", count: 0, href: "#" },
-    { icon: "❤️", title: "찜 목록", desc: "관심 상품 모아보기", count: wishlist.length, href: "/wishlist" },
-    { icon: "🛒", title: "장바구니", desc: "담은 상품 확인", count: cartCount, href: "/cart" },
-    { icon: "⭐", title: "내 리뷰", desc: "작성한 리뷰 관리", count: 0, href: "#" },
-    { icon: "💬", title: "1:1 문의", desc: "문의 내역 확인", count: 0, href: "#" },
-    { icon: "🎫", title: "쿠폰함", desc: "보유 쿠폰 확인", count: 0, href: "#" },
+    { label: "ORDER", title: "주문/배송 조회", desc: "주문 내역과 배송 상태", count: 0, href: "#" },
+    { label: "WISH", title: "찜 목록", desc: "관심 상품 모아보기", count: wishlist.length, href: "/wishlist" },
+    { label: "CART", title: "장바구니", desc: "담은 상품 확인", count: cartCount, href: "/cart" },
+    { label: "REVIEW", title: "내 리뷰", desc: "작성한 리뷰 관리", count: 0, href: "#" },
+    { label: "Q&A", title: "1:1 문의", desc: "문의 내역 확인", count: 0, href: "#" },
+    { label: "COUPON", title: "쿠폰함", desc: "보유 쿠폰 확인", count: 0, href: "#" },
   ];
 
   return (
@@ -109,7 +109,7 @@ export default function MyPage() {
             <Link key={item.title} href={item.href}
               className="bg-white border border-gray-medium/50 rounded-2xl p-5 cursor-pointer hover:border-primary transition-all group">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-2xl">{item.icon}</span>
+                <span className="text-[10px] font-black text-primary tracking-wider">{item.label}</span>
                 {item.count > 0 && (
                   <span className="bg-primary text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">{item.count}</span>
                 )}

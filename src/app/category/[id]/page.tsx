@@ -128,7 +128,7 @@ export default function CategoryPage({ params }: { params: Promise<{ id: string 
               </div>
             ) : (
               <div className="text-center py-20">
-                <p className="text-5xl mb-4">🔍</p>
+                <p className="text-3xl font-black text-gray-medium mb-4">?</p>
                 <p className="text-lg font-bold text-secondary">상품이 없습니다</p>
                 <p className="text-sm text-gray-dark mt-2">곧 새로운 상품이 추가될 예정입니다</p>
               </div>

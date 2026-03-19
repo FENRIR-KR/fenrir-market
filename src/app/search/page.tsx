@@ -104,7 +104,7 @@ function SearchResults() {
           </>
         ) : (
           <div className="text-center py-20">
-            <p className="text-5xl mb-4">🔍</p>
+            <p className="text-3xl font-black text-gray-medium mb-4">?</p>
             <h2 className="text-xl font-bold text-secondary mb-2">검색 결과가 없습니다</h2>
             <p className="text-sm text-gray-dark mb-8">다른 키워드로 검색해보세요</p>
             <div className="flex flex-wrap justify-center gap-2">

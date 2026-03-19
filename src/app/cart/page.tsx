@@ -12,8 +12,8 @@ export default function CartPage() {
     return (
       <div className="min-h-[60vh] flex flex-col">
         <div className="bg-secondary py-20 text-center">
-          <p className="text-5xl mb-4">🛒</p>
-          <h2 className="text-2xl font-black text-white mb-2">장바구니가 비었습니다</h2>
+          <FenrirSymbolV3 size={48} color="rgba(255,255,255,0.15)" />
+          <h2 className="text-2xl font-black text-white mb-2 mt-4">장바구니가 비었습니다</h2>
           <p className="text-white/40 text-sm mb-6">마음에 드는 상품을 담아보세요!</p>
           <Link href="/" className="bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-3 rounded-xl transition-colors">
             쇼핑하러 가기
