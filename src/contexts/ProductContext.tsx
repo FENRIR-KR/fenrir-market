@@ -34,8 +34,8 @@ function crawledToProduct(crawled: CrawledProduct, category: string, id: number)
     subcategory: subcategoryMap[category] || "기타",
     rating: crawled.rating || 4.5,
     reviewCount: crawled.reviewCount || 0,
-    description: `${crawled.mallName}에서 가져온 최저가 상품`,
-    tags: [crawled.mallName, category],
+    description: "FENRIR가 엄선한 최저가 상품",
+    tags: [category],
     isBest: false,
     isNew: true,
   };

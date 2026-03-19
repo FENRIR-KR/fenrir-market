@@ -28,7 +28,7 @@ export async function searchNaverShopping(
     return getDemoProducts(query);
   }
 
-  const url = `https://openapi.naver.com/v1/search/shop.json?query=${encodeURIComponent(query)}&display=${display + 10}&sort=asc`;
+  const url = `https://openapi.naver.com/v1/search/shop.json?query=${encodeURIComponent(query)}&display=${Math.min(display + 20, 100)}&sort=asc`;
 
   const res = await fetch(url, {
     headers: {
